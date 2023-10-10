@@ -4,8 +4,8 @@ import bg from "./image 53.png";
 function Home() {
   return (
     <>
-      <div className=" relative " id="parent">
-        <div className="items-center justify-center inline-block">
+      <div className=" relative h-[386.696px] " id="parent">
+        <div className="items-center justify-center inline-block h-[386.696px]">
           <div className="justify-center items-center flex flex-col ">
             <img className="  w-[548.151px] h-[386.696px] " src={bg} alt="" />
           </div>
@@ -19,24 +19,12 @@ function Home() {
                 Rent the perfect van to make your perfect road trip.
               </p>
               <button
-                className=" w-[207.897px ] px-[143px] py-[9px] mb-12 
+                className=" w-[207.897px ] px-[143px] py-[9px] 
             bg-[#FF8C38] text-center text-[15px] font-bold leading-[31.662px]  rounded-md"
               >
                 Find your van
               </button>
             </div>
-          </div>
-          <div
-            id="footer"
-            className=" flex flex-col justify-center items-center 
-         bg-[#252525]  h-[74.748px] w-[548.151px] py-[25.681px] px-[106.284px] "
-          >
-            <footer
-              className=" text-[#AAAAAA]  
-          text-center text-sm font-normal leading-[22.923px]"
-            >
-              Ⓒ 2022 #VANLIFE
-            </footer>
           </div>
         </div>
       </div>

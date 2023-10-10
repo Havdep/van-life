@@ -1,5 +1,6 @@
 import React from "react";
 import img2 from "./image 54.png";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -36,13 +37,15 @@ function About() {
               <p className="w-[420px] mt-8 mx-[37px] mb-[25px] text-[#161616] text-start text-2xl font-bold leading-[30px] ">
                 Your destination is waiting. Your van is ready.
               </p>
-              <button
-                className="text-[#FFF] text-[15.946px] font-bold
+              <Link to="/vans">
+                <button
+                  className="text-[#FFF] text-[15.946px] font-bold
             leading-[23.919px] px-[22px] py-[12px] 
             rounded-lg bg-[#161616] mr-[282px] ml-[38px]"
-              >
-                Explore our vans
-              </button>
+                >
+                  Explore our vans
+                </button>
+              </Link>
             </div>
           </div>
           <div
