@@ -4,7 +4,7 @@ import { Link, NavLink, Outlet, useParams } from "react-router-dom";
 
 function HostVanDetails() {
   const params = useParams();
-  const [vans, setVans] = useState([]);
+  const [vans, setVans] = useState(null);
   useEffect(() => {
     fetch(`/api/host/vans/${params.id}`)
       .then((res) => res.json())
@@ -16,32 +16,34 @@ function HostVanDetails() {
   const activeStyle =
     "text-[16.149px] font-semibold text-[#4D4D4D] pr-[22px] py-2 hover:underline ";
 
-  const vanDetails = vans.map((van) => {
-    return (
-      <div key={van.id} className=" flex items-center">
-        <div>
-          <img
-            className="ml-6 mt-[20px] rounded-[6px] shrink-0 "
-            src={van.imageUrl}
-            alt=""
-            width="160.15px"
-            height="158px"
-          />
+  const vanDetails =
+    vans &&
+    vans.map((van) => {
+      return (
+        <div key={van.id} className=" flex items-center">
+          <div>
+            <img
+              className="ml-6 mt-[20px] rounded-[6px] shrink-0 "
+              src={van.imageUrl}
+              alt=""
+              width="160.15px"
+              height="158px"
+            />
+          </div>
+          <div className="ml-4">
+            <p className="pl-[11px] mb-4 first-letter:uppercase rounded-[4.072px] text-left bg-[#E17654] text-[#FFEAD0] w-[69.796px] h-[27.594px]">
+              {van.type}
+            </p>
+            <p className="text-left w-[264.667px] text-[26.058px] font-bold leading-[27.404px] text-base">
+              {van.name}
+            </p>
+            <p className="text-left text-base w-[264.667px] font-bold leading-[35.404px]">
+              ${van.price}/day
+            </p>
+          </div>
         </div>
-        <div className="ml-4">
-          <p className="pl-[11px] mb-4 first-letter:uppercase rounded-[4.072px] text-left bg-[#E17654] text-[#FFEAD0] w-[69.796px] h-[27.594px]">
-            {van.type}
-          </p>
-          <p className="text-left w-[264.667px] text-[26.058px] font-bold leading-[27.404px] text-base">
-            {van.name}
-          </p>
-          <p className="text-left text-base w-[264.667px] font-bold leading-[35.404px]">
-            ${van.price}/day
-          </p>
-        </div>
-      </div>
-    );
-  });
+      );
+    });
   console.log(vans);
 
   return (

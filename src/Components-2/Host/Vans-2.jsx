@@ -13,7 +13,10 @@ function Vans2() {
 
   const vansDetail = vans.map((vans) => {
     return (
-      <div className="flex mb-4 items-center justify-center w-[548px]">
+      <div
+        key={vans.id}
+        className="flex mb-4 items-center justify-center w-[548px]"
+      >
         <Link to={`/host/vans/${vans.id}`} key={vans.id}>
           <div
             key={vans.id}
