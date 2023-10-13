@@ -9,30 +9,31 @@ function HostLayout() {
 
   return (
     <>
-      <div className="flex justify-center">
-        <nav className="w-[548px] h-[21px] ">
+      <div className="flex  justify-center">
+        <nav className="w-[548px] h-[21px] bg-[#FFF7ED]">
           <div className="justify-center inline-flex items-center flex-row gap-[29px] ">
             <NavLink
-              to="/host"
-              end
+              to="." //coz parent/current
+              //route os host to unix cmd for same dir is '.'
+              end //end the styling after unvisit the navLink
               className={({ isActive }) => (isActive ? activeStyle : baseStyle)}
             >
               Dashboard
             </NavLink>
             <NavLink
-              to="/host/income"
+              to="income"
               className={({ isActive }) => (isActive ? activeStyle : baseStyle)}
             >
               Income
             </NavLink>
             <NavLink
-              to="/host/vans"
+              to="vans"
               className={({ isActive }) => (isActive ? activeStyle : baseStyle)}
             >
               Vans
             </NavLink>
             <NavLink
-              to="/host/reviews"
+              to="reviews"
               className={({ isActive }) => (isActive ? activeStyle : baseStyle)}
             >
               Reviews
