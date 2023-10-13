@@ -6,19 +6,11 @@ function HostVanPhotos() {
 
   return (
     <>
-      <div className="mt-5">
-        <h1 className="text-2xl font-bold mb-3">Host Vans Photos!</h1>
-        <h3 className="mb-2">
-          <img
-            src={vans[0].imageUrl}
-            width="80px"
-            height="80px"
-            alt=""
-            className="ml-4 mr-3"
-          />
-          Visibility: Public
-        </h3>
-      </div>
+      <h1>Host Vans Photos!</h1>
+      <h3>
+        <img src={vans[0].imageUrl} width="80px" height="80px" alt="" />
+      </h3>
+      <h3>Visibility: Public</h3>
     </>
   );
 }

@@ -42,6 +42,7 @@ function HostVanDetails() {
       </div>
     );
   });
+  console.log(vans);
 
   return (
     <>
